@@ -10,7 +10,7 @@ import utils as ut
 # Load the model and set it to evaluation mode
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 model = GCN(333, 3).to(device)
-model.load_state_dict(torch.load('/Users/rodrigo/PycharmProjects/ising_gnn_deploy/model_params_333_TRUE.pth', map_location=device))
+model.load_state_dict(torch.load('model_params_333_TRUE.pth', map_location=device))
 model.eval()
 
 # Define prediction function
